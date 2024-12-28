@@ -41,7 +41,7 @@ try {
 <div class="mainPostDiv">
     <div class="">
         <span>
-            <img src="../images/noImage.png" alt="">
+            <img src="../images/noImage.jpg" alt="">
             <div id = "inside_post_user_info">
                 <p>{$result['first_name']} {$result['last_name']}</p>
                 <div>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include $_SERVER['DOCUMENT_ROOT'].'/licenta/backend/php_backend/connection.php';
+include $_SERVER['DOCUMENT_ROOT'].'/licentaMain/backend/php_backend/connection.php';
 include '../backend/php_backend/Validation.php';
 
 $validator = new ValidateUsersData();

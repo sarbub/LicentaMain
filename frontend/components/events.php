@@ -23,7 +23,7 @@ try {
         <link rel="stylesheet" href="../frontend/components/components_css/events.css">
         <div class="mainEvents">
             <div>
-                <img src="../images/noImage.png" alt="">
+                <img src="../images/noImage.jpg" alt="">
                 <span>
                     <p>{$data_from_users_table_row['first_name']} {$data_from_users_table_row['last_name']}</p>
                     <p>{$today_hour}h, {$today_minute} minutes ago</p>

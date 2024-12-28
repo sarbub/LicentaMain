@@ -41,8 +41,8 @@ try {
 
 } catch (Exception $e) {
     // Log the error and display a user-friendly message
-    echo "Error in myAccount.php:" . $e->getMessage();
-    echo "<p>Something went wrong. Please try again later.</p>";
+    // echo "Error in myAccount.php:" . $e->getMessage();
+    // echo "<p>Something went wrong. Please try again later.</p>";
 }
 ?>
 
@@ -50,6 +50,6 @@ try {
 <?php if (!empty($row)) : ?>
     <link rel="stylesheet" href="../frontend/components/components_css/myAccountComponent.css">
     <div class="myAccountComponent">
-        <img src="../images/noImage.png" alt="">
+        <img src="../images/noImage.jpg" alt="">
     </div>
 <?php endif; ?>

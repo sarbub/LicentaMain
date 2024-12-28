@@ -33,7 +33,7 @@ switch ($row['account_type']) {
     <span class="after"></span>
     <img id = "mainAccountBackgroundImage" src="../images/abstract.jpg" alt="">
     <div class="image_verified_div">
-        <img id = "mainAccountImage" src="../images/noImage.png" alt="">
+        <img id = "mainAccountImage" src="../images/noImage.jpg" alt="">
         <span id = "myStatusStar" class="material-symbols-outlined $statusClass">
             verified
         </span>

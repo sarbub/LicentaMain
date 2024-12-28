@@ -2,7 +2,7 @@
 session_start();
 
 
-include $_SERVER['DOCUMENT_ROOT'].'/licenta/backend/php_backend/connection.php';
+include $_SERVER['DOCUMENT_ROOT'].'/licentaMain/backend/php_backend/connection.php';
 include_once '../backend/php_backend/Validation.php';
 include_once '../backend/php_backend/fetch_user_data.php';
 
