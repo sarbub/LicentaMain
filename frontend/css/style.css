@@ -43,7 +43,8 @@ h3{
 :root{
     /* --gray: #e7e5e5; */
     --gray:#D9D9D9;
-    --white:#fff;
+    --white:#d3d3d3;
+    --transparent_white:#d3d3d32b;
     --red:#3c8fb5;
     --real_red:#EF476F;
     --real_red_opac:#ef476e70;

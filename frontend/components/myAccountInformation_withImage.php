@@ -50,11 +50,11 @@ switch ($row['account_type']) {
         </span>
     </div>
    <div class="info">
-   <h1>{$row['first_name']} {$row['last_name']}</h1>
-    <p id = "user_email">{$row['email']}</p>
-    <div class="aditionalInfo">
-    <p id="myChoresNumber">0 chores</p>
-    <p id="myPosts">{$user_posts_number} posts</p>
+    <h1>{$row['first_name']} {$row['last_name']}</h1>
+        <p id = "user_email">{$row['email']}</p>
+        <div class="aditionalInfo">
+        <p id="myChoresNumber">0 chores</p>
+        <p id="myPosts">{$user_posts_number} posts</p>
    </div>
 
 </div>

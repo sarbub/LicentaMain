@@ -2,8 +2,8 @@
 
 echo "php file AGAIN";
 
-include $_SERVER['DOCUMENT_ROOT'].'/Centrul vietii/backend/php_backend/Validation.php';
-include $_SERVER['DOCUMENT_ROOT'].'/Centrul Vietii/backend/php_backend/connection.php';
+include $_SERVER['DOCUMENT_ROOT'].'/licentaMain/backend/php_backend/Validation.php';
+include $_SERVER['DOCUMENT_ROOT'].'/licentaMain/backend/php_backend/connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $validator = new ValidateUsersData();

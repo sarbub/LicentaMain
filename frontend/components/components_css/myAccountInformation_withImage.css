@@ -96,7 +96,6 @@
     width: 140px !important;
     height: 140px !important;
     border-radius: 20px;
-    border: 2px solid var(--gray);
     /* border: 4px solid var(--red); */
     margin-bottom: 20px;
     object-fit: cover;
@@ -104,6 +103,7 @@
 
 .mainAccountInformationDiv h1{
     line-height: none;
+    color: var(white);
 }
 
 .mainAccountInformationDiv p{
@@ -122,8 +122,7 @@
 }
 
 .mainAccountInformationDiv button:hover{
-    color: var(--black);
-    background-color: var(--white);
+    background-color: var(--grade_one_white_black);
 }
 
 .buttons_span{
@@ -148,7 +147,7 @@
 
 #add_elements:hover {
     color: var(--red);
-    background-color: #ffffff; /* Solid color allows transition */
+    background-color: var(--white); /* Solid color allows transition */
 }
 
 .dropDownElements{
@@ -178,5 +177,13 @@
 
 #user_email{
     color:var(--dark_gray);
+}
+
+.info h1{
+    color: var(--white);
+}
+
+#myStatusStar{
+    background-color: var(--black);
 }
 

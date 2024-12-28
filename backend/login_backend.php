@@ -1,7 +1,7 @@
 <?php
 session_start();
-include $_SERVER['DOCUMENT_ROOT'] . '/licentaMain/backend/php_backend/Validation.php';
-include $_SERVER['DOCUMENT_ROOT'] . '/licentaMain/backend/php_backend/connection.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/backend/php_backend/Validation.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/backend/php_backend/connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $validator = new ValidateUsersData();

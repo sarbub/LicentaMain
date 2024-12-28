@@ -2,7 +2,7 @@
 session_start();
 
 
-include $_SERVER['DOCUMENT_ROOT'].'/licentaMain/backend/php_backend/connection.php';
+include $_SERVER['DOCUMENT_ROOT'].'/backend/php_backend/connection.php';
 include_once '../backend/php_backend/Validation.php';
 include_once '../backend/php_backend/fetch_user_data.php';
 
@@ -21,7 +21,7 @@ if(!$selector->validatePostContent(($_POST['user_post']))){
 
 
 date_default_timezone_set('Europe/Bucharest');
-$currentDateTime = date('Y-m-d h:i:sa');
+$currentDateTime = date('Y-m-d H:i:s');
 $user_email = $_SESSION['user_email'];
 
 $data = $fetchSelector->fetchDataFromUsers($conn,'users', 'email', $user_email);

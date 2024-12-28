@@ -103,7 +103,7 @@ exit;
 // Close the statement
 $stmt->close();
 unset($_SESSION['application_completed']);
-unset($_SESSION['user_email_from_enter_code']);
+// unset($_SESSION['user_email_from_enter_code']);
 exit;
 
 

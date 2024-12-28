@@ -45,16 +45,16 @@ try {
             <div id = "inside_post_user_info">
                 <p>{$result['first_name']} {$result['last_name']}</p>
                 <div>
-                <span class="material-symbols-outlined" id = "public_icon">
-            public
-        </span>
-                    <p id = "user_post_date">{$formattedDate}</p>
+                    <span class="material-symbols-outlined" id = "public_icon">
+                        public
+                    </span>
+                        <p id = "user_post_date">{$formattedDate}</p>
                 </div>
             </div>
         </span>
         <span class="material-symbols-outlined $statusClass">
                     verified
-                    </span>
+        </span>
     </div>
     <p>{$posts_row['WOnYourMind']}</p>
 </div>
