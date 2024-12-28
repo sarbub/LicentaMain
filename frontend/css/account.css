@@ -1,0 +1,261 @@
+@import url(../css/style.css);
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+/* *{
+    outline:2px solid red;
+} */
+
+.navigation{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.navigation div{
+    display: flex;
+}
+
+.navigation .material-symbols-outlined{
+    align-items: center;
+    display: flex;
+}
+
+#home_logo_link{
+    font-size: 20px;
+    color: var(--black);
+}
+
+.active{
+    color: var(--red)!important;
+}
+
+/* mainSection */
+
+.mainSection{
+    width: 100%;
+    min-height: 90vh;
+    max-height: 90vh;
+    height: auto;
+    display: flex;
+    padding:10px;
+    gap: 10px;
+}
+
+/* more */
+
+.more{
+    display: block; /*flex*/
+    flex: 2;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    background-color: var(--black);
+    overflow-y: scroll;
+}
+
+.more::-webkit-scrollbar{
+    display: none;
+}
+
+
+.more h2{
+    color: var(--dark_gray);
+    margin-bottom: 10px;
+}
+
+#stats_h2{
+    margin-top: 10px;
+}
+
+.sarcini{
+    display: flex;
+    flex-direction: column;
+}
+
+.sarcini::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.statistics{
+    display: flex;
+    flex-direction: column;
+}
+
+.more .sarcini li .inside{
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.more .sarcini li .inside .myAccountComponent:nth-child(2){
+    border-left: 4px solid var(--red);
+}
+.more .sarcini li .inside .myAccountComponent{
+    border-left: 4px solid var(--gray);
+    padding: 0 0 10px 0;
+}
+
+/* navigation and demans  */
+
+.navigation_post_demands{
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.navigation_post_demands ul{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navigation_post_demands ul li{
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    color: var(--dark_gray);
+
+}
+
+.navigation_post_demands ul li:hover{
+    color: var(--red);
+}
+
+
+
+.demands{
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    gap: 10px;
+
+}
+
+
+
+/* main center */
+
+.main_center::-webkit-scrollbar{
+    display: none;
+}
+
+.main_center{
+    display: block;
+    flex-direction: column;
+    flex: 5;
+    min-height: 100%;
+    max-height: 100%;
+    align-items: center;
+    padding: 10px;
+    overflow-y:scroll;
+    overflow-x:hidden ;
+    border-radius: 10px;
+    background-color: var(--black);
+    position: relative;
+}
+
+.userPosts{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+/* events */
+
+.events{
+    display: flex; /*flex*/
+    flex-direction: column;
+    background-color: var(--black);
+    flex: 2;
+    min-height: 100%;
+    max-height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.events h2{
+    width: 100%;
+    padding: 10px 15px;
+    color: var(--dark_gray);
+    border-radius: 8px;
+    text-align: start;
+}
+
+.eventsList::-webkit-scrollbar{
+    display: none;
+}
+
+.eventsList{
+    margin-top: 10px;
+    display: flex;
+    height: 70vh;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    overflow-y:scroll ;
+    overflow-x:none ;
+}
+
+/* add_post_event */
+
+.add_post_event{
+    padding: 10px;
+    width: 100%;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.add_post_event button{
+    margin-top: 10px;
+    width: 160px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.add_post_event button:nth-child(2){
+    /* background: linear-gradient(to right, #4FC1E6, #49CEB3) !important; */
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+.dark_hover:hover{
+    color: var(--white);
+    background-color: var(--black);
+}
+
+

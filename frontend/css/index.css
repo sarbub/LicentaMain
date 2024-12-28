@@ -1,0 +1,313 @@
+@import url(./style.css);
+
+
+
+/* main */
+
+.main{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+}
+
+
+/* navigation section */
+
+
+.navigation_section{
+    background-image:url(../../images/Timisoara.jpg) ;
+
+}
+
+/* first_section */
+
+.first_section{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.first_section p{
+    width:600px ;
+}
+
+.first_section h1{
+    position: relative;
+    top: -30px;
+    padding: 0 10px;
+    border-left: 4px solid var(--black);
+}
+.first_section a{
+    color: var(--concrete);
+}
+
+
+/* second section */
+
+.second_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 10px;
+    gap: 30px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 40px;
+    
+}
+
+.leaders_cards{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 20px;
+
+}
+
+.leaders_cards  .card{
+    width: 210px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.leaders_cards .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* third_section */
+
+.third_section{
+    color: var(--white);
+    width: 100%;
+    height:300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-image: url(../../images/img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.third_section::before{
+    content: "";
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    background: linear-gradient(to right, #f78c6b68 10%, transparent 80%);
+    overflow: hidden;
+}
+
+.third_section h1{
+    z-index: 1;
+}
+.third_section a{
+    z-index: 1;
+    color: var(--black);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--white);
+    width: 120px;
+}
+
+
+
+/* forth section */
+
+.forth_section{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+}
+
+.placesInDorm{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.h2Regular{
+    font-weight:normal;
+}
+
+.Thirdnumbers{
+    font-size: 36px;
+}
+
+#leftPlaces{
+    color: var(--concrete);
+}
+
+#placesUpdateDate{
+    color: var(--dark_gray);
+}
+
+/* fifth_section */
+
+.fifth_section{
+    width: 100%;
+    height: 850px;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px 120px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+
+.fifth_section p{
+    width: 50%;
+
+}
+
+
+.fifth_section a{
+    padding: 10px 30px;
+    border-radius: 8px;
+    background-color: var(--concrete);
+    color: var(--white);
+    text-align: center;
+    width: 180px;
+}
+
+
+/* sixth_section */
+
+.sixth_section {
+    width: 70%;
+    height: 350px; /* Adjust overall height if needed */
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .left_section {
+    position: absolute;
+    top: auto;
+    border: none;
+    left: 0;
+    width: 50%;
+    height: 90%; /* Adjust height for left side */
+    background-image: url('../../images/timisoara3.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .right_section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    border: none;
+    height: 100%; /* Adjust height for right side */
+    background-image: url('../../images/timisoara2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #overlayOne{
+    background-color: rgba(0, 0, 0, 0.457);
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    right: 0;
+    top: 6%;
+  }
+
+  #overlayTwo{
+    background-color: rgba(0, 0, 0, 0.457);
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    top: 5%;
+  }
+
+  .SixthElements{
+    z-index: 2;
+    color: var(--white);
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sixth_section a{
+    background-color: var(--white);
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--black);
+
+  }
+
+
+  
+
+/* seventh_section */
+
+.seventh_section{
+    gap: 70px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 60px 20px;
+    flex-direction: column;
+}
+
+.studentsCardsDiv{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.StudentsCard{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}

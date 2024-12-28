@@ -1,0 +1,36 @@
+@import url(../../css/style.css);
+.myAccountComponent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+}
+
+.myAccountComponent img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.user_nameDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+
+.user_nameDate p {
+    margin: 0;
+    line-height: 1; /* Adjust as needed */
+}
+
+.user_nameDate p:nth-child(2){
+    color:var(--red);
+    font-size: 13px;
+
+}
+

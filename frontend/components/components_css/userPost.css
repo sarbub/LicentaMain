@@ -1,0 +1,70 @@
+@import url(../../css/style.css);
+.mainPostDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--grade_one_white_black);
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+
+    gap: 25px;
+    font-size: 16px;
+    font-size: normal;
+}
+.mainPostDiv div{
+    font-size:15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainPostDiv .data{
+    color: var(--red);
+}
+
+.mainPostDiv div span{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.mainPostDiv p {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.mainPostDiv img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* inside_post_user_info */
+
+#inside_post_user_info{
+    display: block;
+}
+
+#inside_post_user_info div{
+    width: 65px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inside_post_user_info div p{
+    font-size: 10px !important;
+    font-weight: bold;
+    color: var(--dark_gray);
+}
+
+#inside_post_user_info div .material-symbols-outlined{
+    font-size: 15px;
+}
+
+#public_icon{
+    color: var(--dark_gray);
+}
+

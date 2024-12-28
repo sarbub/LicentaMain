@@ -1,0 +1,182 @@
+
+@import url(../../css/style.css);
+.mainAccountInformationDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-width: 100% !important;
+    border-radius: 5px;
+    min-height: 340px;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.mainAccountInformationDiv .after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
+}
+.mainAccountInformationDiv div, .mainAccountInformationDiv span{
+    z-index:2;
+}
+
+#mainAccountBackgroundImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0 !important;
+    object-fit: cover;
+    
+}
+
+/* info */
+
+.info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* image_verified_div */
+
+.image_verified_div{
+    position: relative;
+    display: flex;
+}
+.image_verified_div span{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    background-color: var(--white);
+    border-radius: 50px;
+    padding: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+
+/* types_of_accounts */
+
+.types_of_accounts{
+    display: none;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.types_of_accounts span{
+    font-size: 35px;
+    color: var(--real_red);
+    cursor: pointer;
+}
+.types_of_accounts span:nth-child(2){
+    color: rgb(183, 183, 0);
+}
+
+.types_of_accounts span:nth-child(3){
+    color: var(--red);
+}
+
+#mainAccountImage{
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 20px;
+    border: 2px solid var(--gray);
+    /* border: 4px solid var(--red); */
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.mainAccountInformationDiv h1{
+    line-height: none;
+}
+
+.mainAccountInformationDiv p{
+    color: var(--gray);
+}
+.mainAccountInformationDiv button{
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--blalck);
+    color: var(--white);
+    background-color: var(--black);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.mainAccountInformationDiv button:hover{
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.buttons_span{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#add_elements {
+    padding: 8px 13px;
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#add_elements:hover {
+    color: var(--red);
+    background-color: #ffffff; /* Solid color allows transition */
+}
+
+.dropDownElements{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 2px solid var(--red);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    /* display: none; */
+}
+
+#myChoresNumber{
+    color: var(--real_red);
+}
+
+.aditionalInfo{
+    display: flex;
+    gap: 5px;
+}
+
+#myPosts{
+    color: var(--dark_gray);
+}
+
+#user_email{
+    color:var(--dark_gray);
+}
+

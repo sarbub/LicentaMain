@@ -1,0 +1,128 @@
+@import url(../../css/style.css);
+
+.main_demands_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.first_div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    width: 100%;
+    line-height: 6px;
+    /* border-bottom: 3px solid var(--red); */
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--grade_one_white_black);
+    margin-bottom: 5px;
+
+}
+
+.first_div:hover{
+    background-color: #f5f5f5;
+}
+
+.show_close_btn {
+    border:none;
+    background-color: transparent;
+    color: var(--red);
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.show_close_btn:hover {
+    opacity: 1;
+}
+
+.second_div {
+    padding: 10px 30px;
+    width: 100%;
+    background-color: var(--grade_one_white_black);
+    line-height: 20px;
+    border-radius: 5px;
+}
+
+.third_section {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--black);
+    border-radius: 10px;
+    position: relative;
+}
+
+.third_section button {
+    padding: 10px 20px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.third_section button:nth-child(2) {
+    border: 1px solid var(--red);
+}
+
+.hide_show_demands_div {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: max-height 0.3s ease-in;
+
+}
+.hide_show_demands_div.show {
+    max-height: 570px; /* Adjust as needed based on content size */
+}
+
+.num_rows_first_second_namd_div {
+    display: flex;
+    flex-direction: column;
+    color: var(--dark_gray);
+    font-weight: bold;
+    line-height: 0;
+    padding: 0px 0;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.row_number {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    position: relative;
+    top: -5px;
+}
+
+.span_div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+}
+
+.second_div span {
+    color: var(--dark_gray);
+}
