@@ -109,21 +109,6 @@
 .mainAccountInformationDiv p{
     color: var(--gray);
 }
-.mainAccountInformationDiv button{
-    margin-top: 10px;
-    padding: 10px 30px;
-    border-radius: 50px;
-    border: none;
-    background-color: var(--blalck);
-    color: var(--white);
-    background-color: var(--black);
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-.mainAccountInformationDiv button:hover{
-    background-color: var(--grade_one_white_black);
-}
 
 .buttons_span{
     display: flex;
@@ -131,23 +116,15 @@
     text-align: center;
     justify-self: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    position: relative;
+    margin-top: 10px;
 
 }
-
-#add_elements {
-    padding: 8px 13px;
-    border: none;
-    background-color: var(--red);
-    color: var(--white);
+#edit_profile_form_btn{
     font-size: 16px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-#add_elements:hover {
-    color: var(--red);
-    background-color: var(--white); /* Solid color allows transition */
+    position: relative;
+    padding: 8px 12px;
 }
 
 .dropDownElements{

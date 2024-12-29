@@ -42,17 +42,23 @@ session_start();
             </div>
         </div>
         <div class="main_center">
+            <div class="main_center_profile_bar">
+                <ul>
+                    <li><a href="../frontend/account.php">FirePage</a></li>
+                    <li><?php include '../frontend/components/myAccount.php' ?></li>
+                </ul>
+            </div>
             <div class="myAccountProfile">
             <?php include './components/myAccountInformation_withImage.php' ?>
             </div>
             <div class="add_post_event">
-                <button id="add_post_show_btn" class="dark_hover" >add post</button>
-                <button id="add_event_show_btn">add event</button>
+                <button id="add_post_show_btn" class="dark_radius_type_button" >add post</button>
+                <button id="add_event_show_btn" class = "dark_type_rev_button">add event</button>
             </div>
             <div class="navigation_post_demands">
                 <ul>
-                    <li id="posts_active" class="active">Postari</li>
-                    <li id="demands_active" class = "">Cereri</li>
+                    <li id="posts_active" class="active dark_radius_type_button">Postari</li>
+                    <li id="demands_active" class = "dark_radius_type_button">Cereri</li>
                 </ul>
             </div>
             <div class="demands">

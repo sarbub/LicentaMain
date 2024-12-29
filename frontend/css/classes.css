@@ -1,0 +1,63 @@
+
+/* round buttons for the navigation */
+
+.dark_radius_type_button, .dark_radius_rev_type_button, .dark_type_button, .dark_type_rev_button{
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 40px;
+    color: var(--white);
+    padding: 8px 12px;
+    background-color:var(--grade_one_white_black);
+    transition: all 0.5s ease;
+    border: none;
+    cursor: pointer;
+}
+.dark_type_button, .dark_radius_rev_type_button{
+    border-radius:5px !important;
+}
+
+/* dark  radius type button rev */
+.dark_type_rev_button, .dark_radius_rev_type_button{
+    color: var(--balck);
+    background-color: var(--white);
+    transition: all 0.5s ease;
+}
+
+.dark_type_rev_button:hover, .dark_radius_rev_type_button:hover{
+    color: var(--white);
+    background-color: var(--grade_one_white_black);
+}
+
+
+
+
+
+
+.dark_radius_type_button:hover, .dark_type_button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.round_button{
+    border: none;
+    border-radius: 50%;
+    color: var(--balck);
+    background-color: var(--white);
+    padding: 8px 13px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.round_button:hover{
+    background-color: var(--grade_one_white_black);
+    color: var(--white);
+}

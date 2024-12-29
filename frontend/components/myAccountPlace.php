@@ -55,7 +55,7 @@ echo <<<HTML
         </div>
     </div>
     <div class="names_of_assigned">
-    <p id="myName"> $given_to</p>
+    <p class="myName"> $given_to</p>
     </div>
 
 
@@ -67,7 +67,7 @@ echo <<<HTML
         </div>
     </div>
     <div class="names_of_assigned">
-    <p id="myName"> $given_to</p>
+    <p class="myName"> $given_to</p>
     </div>
 
     <div class="myAccountPlaceComponent">
@@ -78,7 +78,7 @@ echo <<<HTML
         </div>
     </div>
     <div class="names_of_assigned">
-    <p id="myName"> $given_to</p>
+    <p class="myName"> $given_to</p>
     </div>
 
 HTML;

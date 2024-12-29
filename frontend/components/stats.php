@@ -55,7 +55,7 @@ echo <<<HTML
         </div>
     </div>
     <div class="names_of_assigned">
-    <p id="myName">No statistics available</p>
+    <p class="myName">No statistics available</p>
     </div>
 
 HTML;

@@ -5,6 +5,7 @@
     flex-direction: column;
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 .first_div {
@@ -24,7 +25,7 @@
 }
 
 .first_div:hover{
-    background-color: #f5f5f5;
+    background-color: var(--grade_two_white_black);
 }
 
 .show_close_btn {
@@ -36,6 +37,20 @@
     cursor: pointer;
     opacity: 0.5;
     transition: all 0.3s ease;
+}
+
+.expand_content{
+    font-size: 20px !important;
+    padding: 3px 5px !important;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.expand_content:hover{
+    transform: Rotate(360deg);
 }
 
 .show_close_btn:hover {
@@ -50,6 +65,10 @@
     border-radius: 5px;
 }
 
+.second_div p{
+    color: var(--white);
+}
+
 .third_section {
     width: 100%;
     padding: 20px 30px;
@@ -61,20 +80,6 @@
     background-color: var(--black);
     border-radius: 10px;
     position: relative;
-}
-
-.third_section button {
-    padding: 10px 20px;
-    color: var(--white);
-    border: 1px solid var(--white);
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: transparent;
-    transition: all 0.5s ease;
-}
-
-.third_section button:nth-child(2) {
-    border: 1px solid var(--red);
 }
 
 .hide_show_demands_div {

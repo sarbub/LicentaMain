@@ -59,8 +59,8 @@ switch ($row['account_type']) {
 
 </div>
     <div class="buttons_span">
-        <button class = "dark_transition" id="edit_profile_form_btn">Edit profile</button>
-        <button id="add_elements">+</button>
+        <button class = "dark_radius_type_button" id="edit_profile_form_btn">Edit profile</button>
+        <button id="add_elements" class = "round_button">+</button>
     </div>
 </div>
 HTML;

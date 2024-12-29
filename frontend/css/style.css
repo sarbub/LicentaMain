@@ -9,7 +9,6 @@ body{
     max-width: 100vw;
     overflow-x: hidden;
 }
-
 a{
     text-decoration: none;
 }
@@ -51,10 +50,11 @@ h3{
     --pink:#118ab2;
     --black:#1C1C1C;
     --grade_one_white_black:#252525;
+    --grade_two_white_black:#2c2b2b;
     --blue:#118ab2;
     --dark_blue:#073b4c;
     --dark_gray:#625c5c;
-    --purple:#8080D7;
+    --purple:#555796;
     --concrete:#f78c6b;
 }
 

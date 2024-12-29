@@ -1,4 +1,5 @@
 @import url("../../css/style.css");
+@import url("../../css/classes.css");
 .mainOverFileEditProfile{
     width: 100vw;
     height: 100vh;
@@ -59,26 +60,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-.insideMainProfileEdit form button{
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    padding: 10px 20px;
-    color: var(--white);
-    background-color: var(--red);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 2px solid var(--red);
-    transition: all 0.5s ease;
-}
-
-.insideMainProfileEdit form button:hover{
-    color: var(--red);
-    background-color: var(--white);
-    border: 2px solid var(--red);
 }
 
 

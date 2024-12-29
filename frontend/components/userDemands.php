@@ -22,7 +22,7 @@ try {
                 <h6>{$row['county']}</h6>
             </div> <!-- Closing tag for num_rows_first_second_namd_div -->
         </div> <!-- Closing tag for span_div -->
-        <button class="show_close_btn"><span class=" my_open_close_icon material-symbols-outlined">expand_content</span></button>
+        <button class="expand_content"><span class=" my_open_close_icon material-symbols-outlined">add</span></button>
     </div> <!-- Closing tag for first_div -->
     <div class="hide_show_demands_div">
         <div class="second_div">
@@ -41,8 +41,8 @@ try {
             <p>Cu stimă, <span>{$row['first_name']}</span> <span>{$row['last_name']}</span></p>
         </div> <!-- Closing tag for second_div -->
         <div class="third_section">
-            <button data-id = "{$row['id']}" class="accept_btn">Accept</button>
-            <button data-id = "{$row['id']}" class="decline_btn">Decline</button>
+            <button data-id = "{$row['id']}" class="accept_btn dark_radius_type_button">Acceptă</button>
+            <button data-id = "{$row['id']}" class="decline_btn dark_type_rev_button">Refuză</button>
         </div> <!-- Closing tag for third_section -->
     </div> <!-- Closing tag for hide_show_demands_div -->
 </div> <!-- Closing tag for main_demands_div -->

@@ -14,7 +14,7 @@
                 <input id="event_name" type="text" placeholder="University">
                 <input id="event_name" type="text" placeholder="faculty">
             </span>
-            <button type="submit">Edit Profile</button>
+            <button type="submit" class="dark_radius_type_button">Edit Profile</button>
         </form>
     </div>
 </div>

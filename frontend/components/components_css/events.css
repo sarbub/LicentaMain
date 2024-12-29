@@ -1,5 +1,5 @@
 @import url(../../css/style.css);
-
+@import url(../../css/classes.css);
 .mainEvents{
     width: 250px;
     height: auto;
@@ -86,16 +86,6 @@ h4{
     z-index: 0;
 }
 
-.main_no_events_div button{
-    background-color: var(--black);
-    padding: 10px;
-    border-radius: 5px;
+#create_event_btn{
     z-index: 1;
-    border:none;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-.main_no_events_div button:hover{
-    background-color: var(--grade_one_white_black);
 }

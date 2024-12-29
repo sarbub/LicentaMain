@@ -42,7 +42,7 @@ try {
         <div class = "main_no_events_div">
             <img src=".././images/purple.jpg" alt="">
             <span class = "after"></span>
-            <button id = "create event_btn">Create event</button>
+            <button id = "create_event_btn" class = "dark_type_button">Create event</button>
         </div>
         HTML;
     }

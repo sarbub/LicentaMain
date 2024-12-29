@@ -6,6 +6,8 @@ body{
     background-color: black;
 }
 
+@import url(classes.css);
+
 /* *{
     outline:2px solid red;
 } */
@@ -29,7 +31,7 @@ body{
 
 #home_logo_link{
     font-size: 20px;
-    color: var(--black);
+    color: var(--white);
 }
 
 .active{
@@ -119,27 +121,13 @@ body{
     justify-content: space-between;
     padding: 10px 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .navigation_post_demands ul{
     list-style-type: none;
     display: flex;
     gap: 10px;
-}
-
-.navigation_post_demands ul li{
-    cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 40px;
-    color: var(--white);
-    padding: 8px 12px;
-    background-color:var(--grade_one_white_black);
-    transition: all 0.5s ease;
-
 }
 
 .navigation_post_demands ul li:hover{
@@ -154,7 +142,7 @@ body{
     display: none;
     flex-direction: column;
     position: relative;
-    gap: 10px;
+    gap: 5px;
 
 }
 
@@ -242,27 +230,45 @@ body{
 
 }
 
-.add_post_event button{
-    margin-top: 10px;
-    width: 160px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--black);
-    background-color: var(--white);
-    color: var(--black);
-    cursor: pointer;
-    transition: all 0.5s ease;
+.main_center_profile_bar{
+    position:sticky;
+    margin-top: 0;
+    top: -15px;
+    left:0;
+    height: 0;
+    width: 100%;
+    background: var(--black);
+    z-index: 5;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    overflow: hidden;
 }
 
-.add_post_event button:nth-child(2){
-    /* background: linear-gradient(to right, #4FC1E6, #49CEB3) !important; */
-    border: 1px solid var(--red);
-    color: var(--red);
+.main_center_profile_bar ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 35px;
+    list-style-type: none;
 }
 
-.dark_hover:hover{
+.main_center_profile_bar a{
     color: var(--white);
-    background-color: var(--black);
 }
+
+.main_center_profile_bar li{
+    color: var(--white)!important;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+
+
 
 
