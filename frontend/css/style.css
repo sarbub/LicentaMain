@@ -46,6 +46,7 @@ h3{
     --transparent_white:#d3d3d32b;
     --red:#3c8fb5;
     --real_red:#EF476F;
+    --error_red:#951432e1;
     --real_red_opac:#ef476e70;
     --pink:#118ab2;
     --black:#1C1C1C;
@@ -56,9 +57,8 @@ h3{
     --dark_gray:#625c5c;
     --purple:#555796;
     --concrete:#f78c6b;
+    --yellow: #9f8224b1;
 }
-
-
 .svgTop{
     position: absolute;
     top: -1px;

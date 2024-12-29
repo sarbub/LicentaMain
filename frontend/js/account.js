@@ -83,6 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             error: function(xhr, status, error) {
                 console.error("AJAX Error:", error);
+            },complete: function(){
+                setTimeout(function(){
+                    var email_error_message = document.querySelector(".error_email_sender_message");
+                    email_error_message.style.display = "none";
+                }, 100000)
             }
         });
     });
@@ -93,7 +98,7 @@ $(document).ready(function() {
         var userId = $(this).data('id');
 
         $.ajax({
-            url: "../backend/accept_demand_backend.php",
+            url: "../backend/refuse_demand_backend.php",
             type: "POST",
             data: {
                 user_id: userId
@@ -104,6 +109,13 @@ $(document).ready(function() {
             },
             error: function(xhr, status, error) {
                 console.error("AJAX Error:", error);
+            },
+            complete: function(){
+                console.log("this is completed");
+                var email_sent_message = document.querySelector(".email_sent_message");
+                setTimeout(function(){
+                    email_sent_message.style.display = "none";
+                }, 2500)
             }
         });
     });

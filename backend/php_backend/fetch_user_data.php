@@ -147,5 +147,31 @@ class FetchUserDataMain {
         
         $stmt->close();
     }
+
+    public function generateRandomString($length = 10)
+{
+    // Allowed characters
+    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-+=<>?';
+    $specialChar = '!@#$%&*?';
+    $uppercaseChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $numbers = '0123456789'; // Added numbers
+
+    // Ensure there's at least one special character, one uppercase letter, and one number
+    $randomString = '';
+    $randomString .= $specialChar[rand(0, strlen($specialChar) - 1)]; // Add a special character
+    $randomString .= $uppercaseChar[rand(0, strlen($uppercaseChar) - 1)]; // Add an uppercase letter
+    $randomString .= $numbers[rand(0, strlen($numbers) - 1)]; // Add a number
+
+    // Fill the remaining characters with a mix of allowed characters
+    $remainingLength = $length - 3; // Since we've already added 3 characters (1 special, 1 uppercase, 1 number)
+    $charactersLength = strlen($characters);
+
+    for ($i = 0; $i < $remainingLength; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+
+    // Shuffle the string to randomize the position of special char, uppercase, and number
+    return str_shuffle($randomString);
+}
 }    
 ?>
