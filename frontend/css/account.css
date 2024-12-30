@@ -169,6 +169,10 @@ body{
     position: relative;
 }
 
+.myAccountProfile{
+    transition: filter 0.4s ease;
+}
+
 .userPosts{
     display: flex;
     flex-direction: column;

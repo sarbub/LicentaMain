@@ -183,16 +183,32 @@ $(document).ready(function() {
 // scroll effect
 const mainCenterProfileBar = document.querySelector(".main_center_profile_bar");
 const mainCenter = document.querySelector(".main_center");
+const myAccountProfile = document.querySelector(".myAccountProfile");
 
 mainCenter.addEventListener('scroll', () => {
-    if (mainCenter.scrollTop > 300) {  // Changed threshold to 10
+    var scrollPosition = mainCenter.scrollY;
+    // center div navigation bar
+    if (mainCenter.scrollTop > 400) {  // Changed threshold to 10
         mainCenterProfileBar.style.height = "70px";
-
     }
+
+    mainCenter.addEventListener('scroll', () => {
+        if (mainCenter.scrollTop > 190) {  // Changed threshold to 10
+            myAccountProfile.style.filter = `blur(40px)`;
+        }
+    });
+    mainCenter.addEventListener('scroll', () => {
+        if (mainCenter.scrollTop < 190) {  // Changed threshold to 10
+            myAccountProfile.style.filter = `blur(0px)`;
+        }
+    });
+    var blurAmmount = Math.min(scrollPosition / 50,100);
+    mainCenter.style.filter = `blur(${blurAmmount}px)`;
+    // blur efect on profile image 
 });
 
 mainCenter.addEventListener('scroll', () => {
-    if (mainCenter.scrollTop < 300) {  // Changed threshold to 10
+    if (mainCenter.scrollTop < 400) {  // Changed threshold to 10
         mainCenterProfileBar.style.height = "0px";
     }
 });
@@ -205,15 +221,6 @@ document.addEventListener("click", (e) => {
         });
     }
 });
-
-
-
-
-
-
-    
-
-
   });
 
 
