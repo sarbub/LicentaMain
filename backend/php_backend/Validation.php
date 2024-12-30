@@ -37,7 +37,7 @@ class ValidateUsersData
         }
     
         // Adjust length limits as needed
-        if (strlen($content) < 5 || strlen($content) > 500) { 
+        if (strlen($content) < 5 || strlen($content) > 2500) { 
             return false;
         }
         return true; 

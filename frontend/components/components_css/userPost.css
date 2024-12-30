@@ -26,8 +26,19 @@
 
 .mainPostDiv p {
     font-size: 16px;
+    max-width: 100%;
+    display: flex;
     font-weight: normal;
-    color: var(--white);
+    color:var(--white);
+}
+
+.mainPostDiv .user_post_text{
+    color:var(--white);
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    height: auto;
+    word-break: break-all;
 }
 
 .mainPostDiv img{

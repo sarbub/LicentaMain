@@ -52,7 +52,7 @@ HTML;
         }
     } else {
         // No posts available, display a message
-        echo "<p>No posts available at the moment</p>";
+        echo 'no demands';
     }
 } catch (Exception $e) {
     error_log('Error: ' . $e->getMessage());

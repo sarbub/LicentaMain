@@ -56,13 +56,17 @@ try {
                     verified
         </span>
     </div>
-    <p>{$posts_row['WOnYourMind']}</p>
+    <p class = "user_post_text">{$posts_row['WOnYourMind']}</p>
 </div>
 HTML;
         }
     } else {
         // No posts available, display a message
-        echo "<p>No posts available at the moment</p>";
+        echo '<div id = "noDemandsContainer">
+        <span class="material-symbols-outlined">
+            add
+        </span>
+</div>';
     }
 } catch (Exception $e) {
     error_log('Error: ' . $e->getMessage());

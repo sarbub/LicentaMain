@@ -13,7 +13,7 @@ require_once '../PHPMailer/src/SMTP.php';
 $mail = new PHPMailer(true);
 $user_id = $_POST['user_id'];
 $randomNumber = rand(1, 10);
-echo $randomNumber;try {
+try {
     //Server settings
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
@@ -40,7 +40,7 @@ echo $randomNumber;try {
         si parola: '.$_SESSION['random_password'].'</p>
     </div>';
     $mail->send();
-    echo 'Message has been sent '.$user_id; // Always call exit() after a header redirect to stop further execution.
+    $_SESSION['email_has_been_sent'] = true;// Always call exit() after a header redirect to stop further execution.
 } catch (Exception $e) {
     echo "The aplication could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }

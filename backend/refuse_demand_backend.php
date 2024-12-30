@@ -12,7 +12,6 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
-
 $first_name = $row['first_name'];
 $last_name = $row['last_name'];
 $email = $row['email'];
@@ -22,17 +21,15 @@ $_SESSION['last_name'] = $last_name;
 $_SESSION['email'] = $email;
 
 include_once '../backend/user_denied_email_sender.php';
-
 if(isset($_SESSION['email_has_been_sent'])){
     echo " <ul class = 'email_sent_message'>
     <p>Email sent</p>
     <span class='material-symbols-outlined'>done_all</span>
     </ul>";
-    return;
 }
 
 
-// delete data from pending accounts
+//delete data from pending accounts
 // $deleteData = "DELETE FROM pending_accounts WHERE id = ?";
 // $deleteDataPrepare = $conn->prepare($deleteData);
 // $deleteDataPrepare->bind_param("i", $user_id);
@@ -42,7 +39,7 @@ include_once '../frontend/components/userDemands.php';
 unset($_SESSION['first_name']);
 unset($_SESSION['last_name']);
 unset($_SESSION['email']);
-if (isset($_SESSION['email_has_been_sent'])) {
+if (isset($_SESSION['email_has_been_sent'])){
     unset($_SESSION['email_has_been_sent']);
 }
 

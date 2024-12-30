@@ -56,15 +56,21 @@ document.addEventListener("DOMContentLoaded", () => {
       mainOverFileEvent.style.display = mainOverFileEventDisplayStatus === "none" ? "flex" : "none";
   });
 
-  add_post_show_btn.addEventListener("click", () => {
-      const mainOverFilePostDisplayStatus = window.getComputedStyle(mainOverFilePost).display;
-      mainOverFilePost.style.display = mainOverFilePostDisplayStatus === "none" ? "flex" : "none";
-  });
-
   myStatusStar.addEventListener("click", () => {
       const mainOverFilePostDisplayStatus = window.getComputedStyle(types_of_accounts).display;
       types_of_accounts.style.display = mainOverFilePostDisplayStatus === "none" ? "flex" : "none";
   });
+
+//   show post container
+  document.addEventListener("click", (e) => {
+    if(e.target.matches("#noDemandsContainer") || e.target.matches("#add_post_show_btn")){
+        const mainOverFilePostDisplayStatus = window.getComputedStyle(mainOverFilePost).display;
+        mainOverFilePost.style.display = mainOverFilePostDisplayStatus === "none" ? "flex" : "none";
+    }
+  }
+  );
+
+
 
 //   let accept_btn = document.querySelectorAll(".accept_btn");
   $(document).ready(function() {
@@ -84,10 +90,18 @@ document.addEventListener("DOMContentLoaded", () => {
             error: function(xhr, status, error) {
                 console.error("AJAX Error:", error);
             },complete: function(){
-                setTimeout(function(){
-                    var email_error_message = document.querySelector(".error_email_sender_message");
-                    email_error_message.style.display = "none";
-                }, 100000)
+                setTimeout(function() {
+                    var email_sent_message = document.querySelector(".email_sent_message");
+                    var error_email_sender_message = document.querySelector(".error_email_sender_message");
+                    if (email_sent_message) {
+                        email_sent_message.style.display = "none";
+                    }
+                    if (error_email_sender_message) {
+                        error_email_sender_message.style.display = "none";
+                    }
+
+                }, 4000);
+                
             }
         });
     });
@@ -182,6 +196,18 @@ mainCenter.addEventListener('scroll', () => {
         mainCenterProfileBar.style.height = "0px";
     }
 });
+
+document.addEventListener("click", (e) => {
+    if (e.target.matches("#scroll_to_top_main_center")) {
+        mainCenter.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+});
+
+
+
 
 
 

@@ -1,48 +1,16 @@
 @import url("../../css/style.css");
-.mainOverFilePost{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    margin: auto;
-    align-self: center;
-    display: none;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    z-index: 3;
-}
 
-.insideMainPost{
-    width: 80%;
-    height: 80%;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    padding: 5px;
-    background-color: var(--white);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-}
+/* *{
+    outline: 2px solid red;
+} */
 
+/*
 .insideMainPost #post_close_btn{
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: var(--red);
-    padding: 10px;
+    top: 40px;
+    right: 40px;
 }
 
-.insideMainPost #post_close_btn:hover{
-    color: var(--white);
-    background-color: var(--red);
-    border-radius: 50%;
-}
 
 .insideMainPost form{
     position: relative;
@@ -64,30 +32,21 @@
     position: absolute;
     bottom: 30px;
     right: 30px;
-    padding: 10px 20px;
-    color: var(--white);
-    background-color: var(--red);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 2px solid var(--red);
-    transition: all 0.5s ease;
 }
 
-.insideMainPost form button:hover{
-    color: var(--red);
-    background-color: var(--white);
-    border: 2px solid var(--red);
-}
 
 .insideMainPost form textarea{
     width: 100%;
     height: 50%;
     resize: none;
     outline: none;
+    border: none;
     border: 2px solid var(--gray);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
+    margin: auto;
+    background-color: transparent;
+    color: var(--white);
 }
 
 .insideMainPost #post_name{
@@ -96,6 +55,105 @@
     border-radius: 8px;
     border: 2px solid var(--red);
     color: var(--black);
+} */ 
+
+/* uppeer_add_post_section*/
+
+.mainOverFilePost{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    margin: auto;
+    align-self: center;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    z-index: 3;
+}
+
+.insideMainPost{
+    width: 40%;
+    height: 60%;
+    border-radius: 5px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    background-color: var(--black);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.uppeer_add_post_section{
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.uppeer_add_post_section h3{
+    color: var(--white);
+}
+
+form{
+    width: 100%;
+    height: 80%;
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    background-color: var(--black);
+    border-radius: 5px;
+    padding: 10px 30px;
+}
+
+form textarea{
+    width: 100%;
+    height: 80%;
+    resize: none;
+    outline: none;
+    border: none;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    background-color: transparent;
+    color: var(--white);
+}
+
+#create_post_btn{
+    position: relative;
+    margin-top: 30px;
+}
+
+.errorDiv{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.errorDiv ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.errorDiv ul li{
+    padding: 10px;
+    background-color: var(--error_red);
+    color: var(--white);
+    width: 100%;
+    border-radius: 5px;
 }
 
 

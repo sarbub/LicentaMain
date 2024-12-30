@@ -44,7 +44,7 @@ session_start();
         <div class="main_center">
             <div class="main_center_profile_bar">
                 <ul>
-                    <li><a href="../frontend/account.php">FirePage</a></li>
+                    <li><p id="scroll_to_top_main_center">FirePage</p></li>
                     <li><?php include '../frontend/components/myAccount.php' ?></li>
                 </ul>
             </div>

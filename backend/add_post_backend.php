@@ -13,6 +13,7 @@ $fetchSelector = new FetchUserDataMain();
 print_r($_POST);
 
 if(!$selector->validatePostContent(($_POST['user_post']))){
+    echo "there was an error";
     $_SESSION['post_error'] = "Post cant be empty";
     header("Location: ../frontend/account.php");
     return;
@@ -30,9 +31,6 @@ $user_id = $row['id'];
 
 
 echo "this is the user id -> ".$user_id."<-";
-
-
-
 
 $sql = "INSERT INTO users_posts(fk, WOnYourMind, currentDate) values (?,?,?)";
 $stmt = $conn->prepare($sql);
