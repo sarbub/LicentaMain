@@ -10,9 +10,7 @@ $today_day = date("l");
 $today_hour = date("H");
 $today_minute = date("i");
 ?>
-
 <?php
-
 try {
     if($result_events && $result_events->num_rows > 0){
     while($events_row = $result_events->fetch_assoc() ){
@@ -31,7 +29,7 @@ try {
             </div>
             <h4>Plecare la munte</h4>
             <p>{$events_row['event_description']}</p>
-            <button>Participa</button>
+            <button class = "dark_radius_rev_type_button participate_event_btn">Participa</button>
         </div>
         HTML;
     }

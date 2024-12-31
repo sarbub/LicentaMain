@@ -15,69 +15,60 @@
 }
 
 .insideMainEvent{
-    width: 80%;
-    height: 80%;
+    width: 40%;
+    height: 60%;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
+    display: block;
+    justify-content: center!important;
+    align-items: center!important;
     position: relative;
     padding: 5px;
-    background-color: var(--white);
+    background-color: var(--black);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
-.insideMainEvent #event_close_btn{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: var(--red);
-    padding: 10px;
-}
-
-.insideMainEvent #event_close_btn:hover{
-    color: var(--white);
-    background-color: var(--red);
-    border-radius: 50%;
-}
 
 .insideMainEvent form{
     position: relative;
     margin-top: 10%;
     padding: 10px 20px;
-    display: flex;
+    display: block;
+    width: 100%;
     flex-direction: column;
-    width: 80%;
     height: 80%;
     align-items: start;
     gap: 10px;
 }
+.uppeer_add_event_section{
+    height: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    overflow: hidden;
+}
 form span{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .insideMainEvent form button{
     position: absolute;
     bottom: 30px;
     right: 30px;
-    padding: 10px 20px;
-    color: var(--white);
-    background-color: var(--red);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 2px solid var(--red);
-    transition: all 0.5s ease;
 }
 
-.insideMainEvent form button:hover{
-    color: var(--red);
-    background-color: var(--white);
-    border: 2px solid var(--red);
+.insideMainEvent form input{
+    background-color: transparent;
+    color:var(--white)!important;
+    padding: 10px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    position: relative;
+    margin-top: 20px;
 }
 
 .insideMainEvent form textarea{
@@ -86,16 +77,14 @@ form span{
     resize: none;
     outline: none;
     border: 2px solid var(--gray);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
+    position: relative;
+    margin-top: 20px;
 }
 
-.insideMainEvent #event_name, .insideMainEvent #event_date{
-    outline: none;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid var(--red);
-    color: var(--black);
+#event_date::-webkit-calendar-picker-indicator{
+    filter: invert(1);
 }
 
 

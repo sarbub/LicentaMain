@@ -61,17 +61,30 @@ session_start();
                     <li id="demands_active" class = "dark_radius_type_button">Cereri</li>
                 </ul>
             </div>
+            <div class="loader_container">
+                    <div class="loader"></div>
+            </div>
             <div class="demands">
-                <?php include './components/userDemands.php' ?>
+                    <?php include './components/userDemands.php' ?>  
             </div>
             <div class="userPosts">
                 <?php include './components/usersPosts.php'?>
             </div>
         </div>
         <div class="events">
-            <h2>Evenimente</h2>
+            <div class="events_navigation">
+                <ul>
+                    <li class="dark_type_rev_button events_navigation_element">Eventimente</li>
+                    <li class="dark_radius_type_button my_events_navigation_element">Ev.mele</li>
+                </ul>
+            </div>
             <div class="eventsList">
-            <?php include './components/events.php'?>
+            <div class="events_div">
+                <?php include './components/events.php'?>
+            </div>
+            <div class="my_events_div">
+            <?php include './components/my_events.php'?>
+            </div>
             </div>
         </div>
     </div>

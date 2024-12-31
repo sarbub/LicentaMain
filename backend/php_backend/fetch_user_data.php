@@ -33,6 +33,17 @@ class FetchUserDataMain {
         $stmt->close();
         return $exists;
     }
+
+    public function selectDataViaTableNameAndFK($conn, $table, $column, $value) {
+        $sql = "SELECT * FROM $table WHERE $column = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $value); // Assuming $value is a string
+        $stmt->execute();
+        $result = $stmt->get_result(); // Get the result set
+        $stmt->close();
+        return $result; // Return the MySQLi result object
+    }
+    
     
 
     public function fetchDataFromUsersByTable($conn, $table) {
@@ -66,7 +77,7 @@ class FetchUserDataMain {
         $result = $conn->query($sql);
         
         // Check if there are results
-        if ($result->num_rows > 0) {
+        if ($result->num_rows > 0){
             return $result;
         }
         

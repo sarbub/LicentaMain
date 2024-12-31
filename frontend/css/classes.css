@@ -22,14 +22,14 @@
 
 /* dark  radius type button rev */
 .dark_type_rev_button, .dark_radius_rev_type_button{
-    color: var(--balck);
+    color: var(--balck)!important;
     background-color: var(--white);
     transition: all 0.5s ease;
 }
 
 .dark_type_rev_button:hover, .dark_radius_rev_type_button:hover{
-    color: var(--white);
-    background-color: var(--grade_one_white_black);
+    color: var(--white)!important;
+    background-color: var(--grade_one_white_black)!important;
 }
 
 

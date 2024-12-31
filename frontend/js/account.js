@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const types_of_accounts = document.querySelector(".types_of_accounts");
   const myStatusStar = document.querySelector("#myStatusStar");
 
+  const loader_container = document.querySelector(".loader_container");
+
 
   showPostEventsBtns.addEventListener("click", () => {
       const displayStatus = window.getComputedStyle(add_post_event).display;
@@ -83,6 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
             data: {
                 user_id: userId
             },
+            beforeSend:function(){
+                loader_container.style.display = "flex";
+                demands.style.display = "none";
+            },
             success: function(response) {
                 // Reload the demands div using AJAX
                 $(".demands").html(response);
@@ -90,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
             error: function(xhr, status, error) {
                 console.error("AJAX Error:", error);
             },complete: function(){
+                loader_container.style.display = "none";
+                demands.style.display = "flex";
                 setTimeout(function() {
                     var email_sent_message = document.querySelector(".email_sent_message");
                     var error_email_sender_message = document.querySelector(".error_email_sender_message");
@@ -117,7 +125,11 @@ $(document).ready(function() {
             data: {
                 user_id: userId
             },
-            success: function(response) {
+            beforeSend:function(){
+                loader_container.style.display = "flex";
+                demands.style.display = "none";
+            },
+            success: function(response){
                 // Reload the demands div using AJAX
                 $(".demands").html(response);
             },
@@ -125,10 +137,13 @@ $(document).ready(function() {
                 console.error("AJAX Error:", error);
             },
             complete: function(){
+                loader_container.style.display = "none";
+                demands.style.display = "flex";
                 console.log("this is completed");
                 var email_sent_message = document.querySelector(".email_sent_message");
                 setTimeout(function(){
                     email_sent_message.style.display = "none";
+                    user_demands_div.style.display = "flex";
                 }, 2500)
             }
         });
@@ -221,6 +236,40 @@ document.addEventListener("click", (e) => {
         });
     }
 });
-  });
+
+// events navigation
+
+var events_navigation_element = document.querySelector(".events_navigation_element");
+var my_events_navigation_element = document.querySelector(".my_events_navigation_element");
+var my_events_div = document.querySelector(".my_events_div");
+var events_div = document.querySelector(".events_div");
+
+my_events_navigation_element.addEventListener("click",()=>{
+    // theme
+    my_events_navigation_element.classList.add("dark_type_rev_button");
+    events_navigation_element.classList.remove("dark_type_rev_button");
+    events_navigation_element.classList.add("dark_radius_type_button");
+
+    // action
+    console.log("this is me");
+    my_events_div.style.display = "grid";
+    events_div.style.display = "none";
+
+
+})
+
+events_navigation_element.addEventListener("click",()=>{
+    // theme
+    console.log("this is me again");
+    events_navigation_element.classList.add("dark_type_rev_button");
+    my_events_navigation_element.classList.remove("dark_type_rev_button");
+    my_events_navigation_element.classList.add("dark_radius_type_button");
+        // action
+        my_events_div.style.display = "none";
+        events_div.style.display = "grid";
+})
+
+  
+});
 
 
