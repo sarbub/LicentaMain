@@ -19,7 +19,6 @@
 .dark_type_button, .dark_radius_rev_type_button{
     border-radius:5px !important;
 }
-
 /* dark  radius type button rev */
 .dark_type_rev_button, .dark_radius_rev_type_button{
     color: var(--balck)!important;

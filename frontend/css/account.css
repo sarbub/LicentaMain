@@ -12,6 +12,31 @@ body{
     outline:2px solid red;
 } */
 
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--black); 
+    min-width: 20px!important;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--black); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+
+  }
+
+  /* navigation */
+
 .navigation{
     width: 100%;
     height: 70px;
@@ -68,11 +93,9 @@ body{
     overflow-y: scroll;
 }
 
-.more::-webkit-scrollbar{
-    display: none;
+.more:hover::-webkit-scrollbar-thumb{
+    background: var(--white);
 }
-
-
 .more h2{
     color: var(--dark_gray);
     margin-bottom: 10px;
@@ -87,9 +110,10 @@ body{
     flex-direction: column;
 }
 
-.sarcini::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
-}
+/* .sarcini::-webkit-scrollbar {
+    display: none;
+}  */
+
 
 .statistics{
     display: flex;
@@ -187,7 +211,6 @@ body{
 
 .my_events_div{
     display: none;
-    border: 2px solid blue;
     width: 100%;
     color: var(--white);
     gap: 10px; 
@@ -208,9 +231,9 @@ body{
 
 /* main center */
 
-.main_center::-webkit-scrollbar{
+/* .main_center::-webkit-scrollbar{
     display: none;
-}
+} */
 
 .main_center{
     display: block;
@@ -226,6 +249,11 @@ body{
     background-color: var(--black);
     position: relative;
 }
+
+.main_center:hover::-webkit-scrollbar-thumb{
+    background: var(--white);
+}
+
 
 .myAccountProfile{
     transition: filter 0.4s ease;
@@ -263,9 +291,6 @@ body{
     text-align: start;
 }
 
-.eventsList::-webkit-scrollbar{
-    display: none;
-}
 
 .eventsList{
     margin-top: 10px;
@@ -275,10 +300,13 @@ body{
     flex-direction: column;
     align-items: center;
     padding: 0;
-    overflow-y:scroll ;
+    overflow-y:scroll;
     overflow-x:none ;
 }
 
+.eventsList:hover::-webkit-scrollbar-thumb{
+    background: var(--white);
+}
 /* add_post_event */
 
 .add_post_event{

@@ -27,9 +27,9 @@ try {
                     <p>{$today_hour}h, {$today_minute} minutes ago</p>
                 </span>
             </div>
-            <h4>Plecare la munte</h4>
+            <h4>{$events_row['event_title']}</h4>
             <p>{$events_row['event_description']}</p>
-            <button class = "dark_radius_rev_type_button participate_event_btn">Participa</button>
+            <button class = "dark_type_button participate_event_btn">Participa</button>
         </div>
         HTML;
     }

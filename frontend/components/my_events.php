@@ -2,23 +2,41 @@
 <?php include_once '../backend/php_backend/fetch_user_data.php' ?>
 <?php
 // select the data from users
-$user_id = $_SESSION['user_email'];
+$user_email = $_SESSION['user_email'];
 $fetch_data_selector = new FetchUserDataMain();
-$res = $fetch_data_selector->fetchDataFromUsers($conn, "users", "email",$user_id );
+$res = $fetch_data_selector->fetchDataFromUsers($conn, "users", "email",$user_email );
 $row = $res->fetch_assoc();
-
 $events_res = $fetch_data_selector->selectDataViaTableNameAndFK($conn, "users_events", "fk",$user_id );
 
-$user_id = "this is the user id".$row['id'];
+$user_id =$row['id'];
 try {
-    if(!$res && !$res->num_rows >0){
+    if(!$res || $res->num_rows == 0){
         echo "no user found";
         return;
     }
+    if(!$events_res || $events_res->num_rows == 0){
+        echo "no events found";
+        return;
+    }
+    while($event_row= $events_res->fetch_assoc()){
+        echo <<<HTML
+        <link rel="stylesheet" href="../frontend/components/components_css/events.css">
+        <div class="mainEvents">
+            <!-- <div>
+                <img src="../images/noImage.jpg" alt="">
+                <span>
+                    <p>{$data_from_users_table_row['first_name']} {$data_from_users_table_row['last_name']}</p>
+                    <p>{$today_hour}h, {$today_minute} minutes ago</p>
+                </span>
+            </div> -->
+            <h4>{$event_row['event_title']}</h4>
+            <p>{$event_row['event_description']}</p>
+        </div>
+        HTML;
 
-    while($events_res && $events_res->num_rows > 0){
         
     }
+
 } catch (Exception $e) {
     error_log('Error: ' . $e->getMessage());
     echo "<p>An error occurred while fetching events. Please try again later.</p>";

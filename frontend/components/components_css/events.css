@@ -1,7 +1,7 @@
 @import url(../../css/style.css);
 @import url(../../css/classes.css);
 .mainEvents{
-    width: 250px;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     background: linear-gradient(to top, var(--black), var(--grade_one_white_black));
@@ -17,7 +17,6 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 2px solid var(--white);
 }
 
 .mainEvents div{
