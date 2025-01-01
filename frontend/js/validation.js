@@ -3,20 +3,21 @@
     // validate user names
     ValidateNames(name, error) {
         const regExp = /^[A-Za-zĂÎȘȚÂăîșțâ.-]+(?:\s[A-Za-zĂÎȘȚÂăîșțâ.-]+)*$/;
-        if (!name || typeof name !== 'string') {
-            error.innerHTML = "Câmpul nu poate fi gol și trebuie să fie text";
+        if (!name || typeof name !== 'string'){
+            error.push = "Câmpul nu poate fi gol și trebuie să fie text";
             return false;
         }
+
     
         // Validate the name format using the regular expression
-        if (!regExp.test(name)) {
-            error.innerHTML = "Formatul campului nu este acceptat";
+        if (!regExp.test(name)){
+            error.push = "Formatul campului nu este acceptat";
             return false;
         }
     
         // Check if the name length is within 3 and 50 characters
         if (name.length < 3 || name.length > 50) {
-            error.innerHTML = "Câmpul trebuie să aibă între 3 și 50 de litere";
+            error.push = "Câmpul trebuie să aibă între 3 și 50 de litere";
             return false;
         }
         error.innerHTML = "";  // Clear any error message
