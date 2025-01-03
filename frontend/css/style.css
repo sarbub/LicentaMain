@@ -144,9 +144,8 @@ h3{
 /* input errors */
 
 .input_error{
-    background-color: var(--real_red_opac) !important;
     color: var(--white) !important;
-    border: var(--real_red_opac);
+    border: 2px solid var(--real_red_opac);
 }
 
 .input_error::placeholder{

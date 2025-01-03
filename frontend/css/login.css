@@ -1,7 +1,6 @@
 @import url(../css/style.css);
 
 .main_section{
-    border: 2px solid blue;
     width: 100vw;
     height: 100vh;
     background-size: 100% 100%;
@@ -30,7 +29,13 @@
     display: flex;
     justify-content: center;
     border-radius: 8px;
-    background-color: var(--white);
+}
+.login_section form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .login_section form input{
@@ -51,12 +56,6 @@
 
 .login_section form button{
     margin-top: 20px;
-    width: 200px;
-    border: none;
-    background-color: var(--red);
-    padding: 7px;
-    border-radius: 5px;
-    color: var(--white);
 }
 
 #dont_haveAccount_p{

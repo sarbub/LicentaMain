@@ -61,14 +61,14 @@
         </div>
         <div class="worshipTimeImages">
             <span id="WorshipSpan1">
-                <img src="../images/partasie1.jpg" alt="">
-                <img src="../images/partasie2.jpg" alt="">
-                <img src="../images/partasie3.jpg" alt="">
+                <img src="../images/CVLauda.jpg" alt="">
+                <img src="../images/CVMisiune1.jpg" alt="">
+                <img src="../images/CVMisiune2.jpg" alt="">
             </span>
             <span id="WorshipSpan2">
-                <img src="../images/partasie4.jpg" alt="">
-                <img src="../images/partasie5.jpg" alt="">
-                <img src="../images/partasie6.jpg" alt="">
+                <img src="../images/CVCadouri1.jpg" alt="">
+                <img src="../images/CVPenitenciar.jpg" alt="">
+                <img src="../images/CVViky.jpg" alt="">
             </span>
         </div>
         <?php include "../frontend/components/footer.php" ?>

@@ -77,23 +77,10 @@ $userExistsError = isset($_SESSION['EmailExistError']) ? $_SESSION['EmailExistEr
     background-color: var(--white);
   }
 
-  button {
-    background-color: var(--red);
-    color: #ffffff;
-    border-radius: 8px;
-    border: none;
-    padding: 10px 20px;
-    font-size: 17px;
-    font-family: Raleway;
-    cursor: pointer;
-  }
+
 
   button:hover {
     opacity: 0.8;
-  }
-
-  #prevBtn {
-    background-color: #bbbbbb;
   }
 
   /* Make circles that indicate the steps of the form: */
@@ -117,6 +104,7 @@ $userExistsError = isset($_SESSION['EmailExistError']) ? $_SESSION['EmailExistEr
     background-color: #04AA6D;
   }
 </style>
+<link rel="stylesheet" href="../frontend/css/classes.css">
 <div class="main_request_div">
   <!-- <form id="request_place_form" class="" method="POST" action="../backend/validate_email.php"> -->
   <form id="request_place_form" class="" method="POST" action="../backend/verify_email_backend.php">
@@ -136,9 +124,9 @@ $userExistsError = isset($_SESSION['EmailExistError']) ? $_SESSION['EmailExistEr
       <input id="email" type="" placeholder="Enter email..." oninput="this.className = ''" name="email">
     </div>
     <div style="overflow:auto;">
-      <div style="float:right;">
-        <button type="button" id="prevBtn" onclick="">Previous</button>
-        <button type="button" id="nextBtn" onclick="">Next</button>
+      <div style="float:right; display :flex; gap: 10px;">
+        <button type="button" id="prevBtn" class="dark_radius_rev_type_button" onclick="">Previous</button>
+        <button type="button" id="nextBtn" class="dark_radius_rev_type_button" onclick="">Next</button>
       </div>
     </div>
     <!-- Circles which indicates the steps of the form: -->

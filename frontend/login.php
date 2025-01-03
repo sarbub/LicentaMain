@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../frontend/css/login.css">
+    <link rel="stylesheet" href="../frontend/css/classes.css">
 </head>
 <body>
     <div class="main_section">
@@ -42,7 +43,7 @@
                     <p id="passwordError" class="error-message"><?php echo !empty($passwordError) ? $passwordError : ''; ?></p>
                 </div>
 
-                <button type="submit" id="loginButton">Login</button>
+                <button type="submit" id="loginButton" class="dark_radius_rev_type_button">Login</button>
                 <div class="">
                     <p id="dont_haveAccount_p">Don't have an account? <a href="./verify_email.php">Create account</a></p>
                 </div>
