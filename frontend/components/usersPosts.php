@@ -5,7 +5,7 @@ include_once '../backend/php_backend/fetch_user_data.php';
 try {
     $userData = new FetchUserDataMain();
     $res = $userData->fetchDataFromUsers($conn, 'users', 'email', $_SESSION['user_email']);
-    $postsResult = $userData->fetchDataFromUsersPosts($conn);
+    $postsResult = $userData->fetchDataFromDBDesc($conn, "users_posts", "id");
 
     date_default_timezone_set('Europe/Bucharest');
     $row = $res->fetch_assoc(); // Fetch user data

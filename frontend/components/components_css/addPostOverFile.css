@@ -92,12 +92,5 @@ form textarea{
     gap: 10px;
 }
 
-.errorDiv ul li{
-    padding: 10px;
-    background-color: var(--error_red);
-    color: var(--white);
-    width: 100%;
-    border-radius: 5px;
-}
 
 

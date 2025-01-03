@@ -16,59 +16,75 @@
 }
 
 .insideMainProfileEdit{
-    width: 80%;
-    height: 80%;
+    width: 40%;
+    height: 60%;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     position: relative;
     padding: 5px;
-    background-color: var(--white);
+    background-color: var(--black);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
+
+.insideMainProfileEdit::-webkit-scrollbar {
+    display: none; /* Hide the default scrollbar */
+  }
+
+  .myInforamtion{
+    width: 100%;
+    padding: 0 10px;
+    height: auto, impo !important;;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+
+  .myInforamtion ul{
+    position: relative;
+    margin-top: 120px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    text-align: start;
+  }
+
+  .myInforamtion ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--transparent_white);
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    overflow: hidden;
+  }
+
 
 .insideMainProfileEdit #edit_profile_close_btn{
     position: absolute;
+    cursor: pointer;
     top: 20px;
     right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: var(--red);
-    padding: 10px;
+    z-index: 1;
 }
 
-.insideMainProfileEdit #edit_profile_close_btn:hover{
-    color: var(--white);
-    background-color: var(--red);
-    border-radius: 50%;
-}
-
-.insideMainProfileEdit form{
+#edit_profile_btn_li{
     position: relative;
-    margin-top: 10%;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 80%;
-    align-items: start;
-    gap: 10px;
-}
-.insideMainProfileEdit form span{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    margin-bottom: 10px;
+    text-align: center !important;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
 }
 
 
-.insideMainProfileEdit #post_name{
-    outline: none;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid var(--red);
-    color: var(--black);
-}
 
 

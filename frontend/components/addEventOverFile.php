@@ -9,6 +9,20 @@
                 close
             </span>
         </div>
+        <ul id="errorList">
+            <li class="events_error error_item">
+                <p id = "error_message">error</p>
+                <span class="material-symbols-outlined">
+                    warning
+                </span>
+            </li>
+        </ul>
+        <?php
+        if(isset($_SESSION['event_error'])){
+            echo "<p>{$_SESSION['event_error']}</p>";
+            unset($_SESSION['event_error']);
+        }
+        ?>
         <form action="../backend/add_event_backend.php" id="events_form" method="POST">
             <span>
                 <input id="event_name" name="event_name" type="text" placeholder="Enter event name">
@@ -21,20 +35,31 @@
     <script type = "module">
         import {ValidateUserData} from '../frontend/js/Validation.js';
         var selector = new ValidateUserData();
-        var form = document.querySelector("#events_form");
+        var event_name = document.querySelector("#event_name");
+        var event_date = document.querySelector("#event_date");
+        var event_description = document.querySelector("#event_description");
         var submit_event_btn = document.querySelector("#submit_event_btn");
-        let errors = [];
+        var error_message = document.querySelector("#error_message");
+        var events_error = document.querySelector(".events_error");
         submit_event_btn.addEventListener("click",(e)=>{
             e.preventDefault();
-            let event_name = document.querySelector("#event_name").value;
-            let event_date = document.querySelector("#event_date").value;
-            let event_description = document.querySelector("#event_description").value;
-            // event name validation
-            if(!selector.ValidateNames(event_name, errors)){
-                errors.forEach((error)=>{
-                    console.log(error);
-                })
+            if(selector.ValidateNames(event_name.value, error_message)){
+                if(selector.ValidatePostsContent(event_description.value, error_message)){
+                    if(selector.ValidateDate(event_date.value, error_message)){
+                        events_form.submit();
+                        return;
+                    }
+                    events_error.style.display = "flex";
+                }
+                events_error.style.display = "flex";
             }
+            events_error.style.display = "flex";
         })
+        event_description.addEventListener("input",()=>{
+            events_error.style.display = "none";
+    })
+    event_name.addEventListener("input",()=>{
+        events_error.style.display = "none";
+    })
     </script>
 </div>

@@ -1,13 +1,13 @@
 <?php include_once '../backend/php_backend/connection.php' ?>
 <?php include_once '../backend/php_backend/fetch_user_data.php' ?>
 <?php
+
 // select the data from users
 $user_email = $_SESSION['user_email'];
 $fetch_data_selector = new FetchUserDataMain();
 $res = $fetch_data_selector->fetchDataFromUsers($conn, "users", "email",$user_email );
 $row = $res->fetch_assoc();
 $events_res = $fetch_data_selector->selectDataViaTableNameAndFK($conn, "users_events", "fk",$user_id );
-
 $user_id =$row['id'];
 try {
     if(!$res || $res->num_rows == 0){
@@ -20,8 +20,8 @@ try {
     }
     while($event_row= $events_res->fetch_assoc()){
         echo <<<HTML
-        <link rel="stylesheet" href="../frontend/components/components_css/events.css">
-        <div class="mainEvents">
+        <link rel="stylesheet" href="../frontend/components/components_css/my_events.css">
+        <div class="main_my_event">
             <!-- <div>
                 <img src="../images/noImage.jpg" alt="">
                 <span>

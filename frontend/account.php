@@ -23,7 +23,7 @@ session_start();
 <body>
     <?php include "../frontend/components/addPostOverFile.php" ?>
     <?php include "../frontend/components/addEventOverFile.php" ?>
-    <?php include "../frontend/components/editProfile.php" ?>
+    <?php include "../frontend/components/editProfileOverFile.php" ?>
     <div class="navigation">
         <a href="../frontend/account.php" id="home_logo_link">FirePage</a>
         <div class="">

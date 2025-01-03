@@ -43,6 +43,32 @@ class ValidateUsersData
         return true; 
     }
 
+    // validate date
+
+    public function validateDate($date) {
+        // Check if the date is empty
+        if (empty($date)) {
+            return false;  // Date cannot be empty
+        }
+    
+        // Check if the date is a valid date
+        $userDate = DateTime::createFromFormat('Y-m-d', $date);
+        if (!$userDate || $userDate->format('Y-m-d') !== $date) {
+            return false;  // Invalid date format
+        }
+    
+        // Check if the date is today or in the future
+        $today = new DateTime();
+        $today->setTime(0, 0);  // Normalize today's date to avoid time comparison issues
+    
+        if ($userDate < $today) {
+            return false;  // Date cannot be in the past
+        }
+    
+        return true;
+    }
+    
+
 
     // Validate user email
     public function validateEmail($email)

@@ -10,7 +10,6 @@ include_once '../backend/php_backend/fetch_user_data.php';
 $selector = new ValidateUsersData();
 $fetchSelector = new FetchUserDataMain();
 
-print_r($_POST);
 
 if(!$selector->validatePostContent(($_POST['user_post']))){
     echo "there was an error";
@@ -18,8 +17,6 @@ if(!$selector->validatePostContent(($_POST['user_post']))){
     header("Location: ../frontend/account.php");
     return;
 }
-
-
 
 date_default_timezone_set('Europe/Bucharest');
 $currentDateTime = date('Y-m-d H:i:s');

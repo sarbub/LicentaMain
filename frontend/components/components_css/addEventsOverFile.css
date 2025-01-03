@@ -25,8 +25,14 @@
     padding: 5px;
     background-color: var(--black);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    overflow-Y: scroll;
+    overflow-X: hidden;
 }
+
+.insideMainEvent::-webkit-scrollbar {
+    display: none; /* Hide the default scrollbar */
+  }
+
 
 
 .insideMainEvent form{

@@ -3,7 +3,7 @@
 <?php 
 $userData = new FetchUserDataMain();
 $res = $userData->fetchDataFromUsers($conn,'users','email',$_SESSION['user_email']);
-$result_events = $userData->fetchDataFromUsersEvents($conn);
+$result_events = $userData->fetchDataFromDBDesc($conn, "users_events", "event_id");
 date_default_timezone_set('Europe/Bucharest');
 $row = $res->fetch_assoc();
 $today_day = date("l");
@@ -13,7 +13,7 @@ $today_minute = date("i");
 <?php
 try {
     if($result_events && $result_events->num_rows > 0){
-    while($events_row = $result_events->fetch_assoc() ){
+    while($events_row = $result_events->fetch_assoc()){
         $events_fk = $events_row['fk'];
         $data_from_users_table =$userData->fetchDataFromUsers($conn,'users','id',$events_fk);
         $data_from_users_table_row = $data_from_users_table->fetch_assoc();

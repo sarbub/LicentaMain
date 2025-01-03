@@ -4,25 +4,48 @@
     ValidateNames(name, error) {
         const regExp = /^[A-Za-zĂÎȘȚÂăîșțâ.-]+(?:\s[A-Za-zĂÎȘȚÂăîșțâ.-]+)*$/;
         if (!name || typeof name !== 'string'){
-            error.push = "Câmpul nu poate fi gol și trebuie să fie text";
+            console.log("holla");
+            error.innerHTML = "Câmpul nu poate fi gol și trebuie să fie text";
             return false;
         }
 
-    
         // Validate the name format using the regular expression
         if (!regExp.test(name)){
-            error.push = "Formatul campului nu este acceptat";
+            error.innerHTML ="Formatul campului nu este acceptat";
             return false;
         }
     
         // Check if the name length is within 3 and 50 characters
         if (name.length < 3 || name.length > 50) {
-            error.push = "Câmpul trebuie să aibă între 3 și 50 de litere";
+            error.innerHTML = "Câmpul trebuie să aibă între 3 și 50 de litere";
             return false;
         }
         error.innerHTML = "";  // Clear any error message
         return true;
     }
+
+    ValidatePostsContent(post, errorElement) {
+        const regExp = /^[A-Za-zĂÎȘȚÂăîșțâ0-9\s.,'"/\-!?@#$%^&*()_+=:;<>~`{}[\]\\|]*$/;
+        
+        if (!post || typeof post !== 'string') {
+            errorElement.innerHTML = "Câmpul nu poate fi gol și trebuie să fie text";
+            return false;
+        }
+    
+        if (!regExp.test(post)) {
+            errorElement.innerHTML = "Formatul câmpului nu este acceptat";
+            return false;
+        }
+    
+        if (post.length < 5 || post.length > 2500) {
+            errorElement.innerHTML = "Câmpul trebuie să aibă între 3 și 2500 de caractere";
+            return false;
+        }
+    
+        errorElement.innerHTML = "";  // Clear errors if validation passes
+        return true;
+    }
+    
     
     
 
@@ -40,6 +63,38 @@
         error.innerHTML = "";
         return true;
     }
+
+    // validate date
+    ValidateDate(date, error) {
+        // Check if the date is empty
+        if (!date) {
+            error.innerHTML = "Data nu poate fi goală";
+            return false;
+        }
+    
+        // Check if the input is a valid date
+        const userDate = new Date(date);
+        const today = new Date();
+        
+        // Set time of today to 00:00 to compare only the date (ignore the time)
+        today.setHours(0, 0, 0, 0);
+    
+        if (isNaN(userDate)) {
+            error.innerHTML = "Formatul datei nu este valid";
+            return false;
+        }
+    
+        // Check if the entered date is today or in the future
+        if (userDate < today) {
+            error.innerHTML = "Data trebuie să fie astăzi sau în viitor";
+            return false;
+        }
+    
+        // Clear the error message if all checks pass
+        error.innerHTML = "";
+        return true;
+    }
+    
 
     // validate user int
 

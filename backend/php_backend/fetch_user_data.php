@@ -1,6 +1,8 @@
 <?php
 
 class FetchUserDataMain {
+
+
     public function fetchDataFromUsers($conn, $table, $column, $value) {
         // Prepare the SQL statement to prevent SQL injection
         $sql = "SELECT * FROM $table WHERE $column = ? LIMIT 1";
@@ -35,7 +37,7 @@ class FetchUserDataMain {
     }
 
     public function selectDataViaTableNameAndFK($conn, $table, $column, $value) {
-        $sql = "SELECT * FROM $table WHERE $column = ?";
+        $sql = "SELECT * FROM $table WHERE $column = ? ORDER BY `event_id` DESC";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $value); // Assuming $value is a string
         $stmt->execute();
@@ -72,10 +74,9 @@ class FetchUserDataMain {
         return null;  // or you could use: return [];
     }
     
-    public function fetchDataFromUsersPosts($conn) {
-        $sql = "SELECT * FROM users_posts ORDER BY `id` DESC";
+    public function fetchDataFromDBDesc($conn, $table, $order_by) {
+        $sql = "SELECT * FROM $table ORDER BY $order_by DESC";
         $result = $conn->query($sql);
-        
         // Check if there are results
         if ($result->num_rows > 0){
             return $result;

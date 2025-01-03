@@ -41,7 +41,7 @@
     color: var(--black);
 }
 
-.round_button{
+.round_button , .round_button_rev{
     border: none;
     border-radius: 50%;
     color: var(--balck);
@@ -54,10 +54,35 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+}
 
+.round_button_rev{
+    color: var(--white);
+    background-color: var(--black);
 }
 
 .round_button:hover{
     background-color: var(--grade_one_white_black);
     color: var(--white);
+}
+.round_button_rev:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+
+
+
+/* errors */
+
+.error_item{
+    padding: 10px;
+    background-color: var(--error_red);
+    color: var(--white);
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
 }

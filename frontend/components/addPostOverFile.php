@@ -11,7 +11,12 @@
         </div>
         <div class="errorDiv">
             <ul id="errorList">
-
+                <li class="post_error error_item">
+                    <p id = "post_error_message">error</p>
+                    <span class="material-symbols-outlined" style = "border:2px oslid blue">
+                        warning
+                    </span>
+                </li>
             </ul>
         </div>
         <form action="../backend/add_post_backend.php" id="posts_form"" method="POST">
@@ -21,38 +26,23 @@
     </div>
 </div>
 <script type="module">
+    // selector
     import {ValidateUserData} from '../frontend/js/Validation.js';
-    var textArea = document.getElementById('post_description');
-    var submit_button = document.getElementById('create_post_btn');
-    var posts_form = document.getElementById('posts_form');
-    let errors = [];
-    submit_button.addEventListener('click', function(event){
-        let errorList = document.getElementById('errorList');
-        errorList.innerHTML = '';
-        event.preventDefault();
-        errors = [];
-        let area_text_values = textArea.value;
-        if(area_text_values.length == 0 || area_text_values.length < 5){
-            errors.push("Post cannot be empty and at least 5 chars");
-        }
-        if(area_text_values.length > 2500){
-            errors.push("Post cannot be more than 2500 chars");
-        }
-        if(errors.length > 0 ){
-            errors.forEach(error => {
-                let li = document.createElement('li');  // Create <li>
-                li.textContent = error;                 // Set text
-                li.classList.add('error-item');         // Optional: Add class
-                errorList.appendChild(li);    
-                          // Attach to <ul>
-            });
-        }
-        else{
-            posts_form.submit();
-        }
-    });
+    var selector = new ValidateUserData();
+    var form = document.querySelector("#posts_form");
+    var post_description = document.querySelector("#post_description");
+    var create_post_btn = document.querySelector("#create_post_btn");
+    var post_error_message = document.querySelector("#post_error_message");
+    var post_error = document.querySelector(".post_error");
 
-    textArea.addEventListener("input", function(){
-        errorList.innerHTML = '';
+    create_post_btn.addEventListener("click",(e)=>{
+        e.preventDefault();
+        if(selector.ValidatePostsContent(post_description.value, post_error_message)){
+            form.submit();
+        }
+        post_error.style.display = "flex";
+    })
+    post_description.addEventListener("input",()=>{
+        post_error.style.display = "none";
     })
 </script>
