@@ -3,10 +3,12 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+    align-items: self-start;
+    text-align: start;
     position: relative;
     padding: 10px;
-    background-color: var(--black);
+    background-color: var(--grade_one_white_black);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 

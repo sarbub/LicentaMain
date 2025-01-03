@@ -29,8 +29,8 @@ try {
                     <p>{$today_hour}h, {$today_minute} minutes ago</p>
                 </span>
             </div> -->
-            <h4>{$event_row['event_title']}</h4>
-            <p>{$event_row['event_description']}</p>
+            <h4>Name:{$event_row['event_title']}</h4>
+            <p>Description:{$event_row['event_description']}</p>
         </div>
         HTML;
 

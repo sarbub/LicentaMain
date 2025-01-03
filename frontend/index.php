@@ -53,17 +53,10 @@ unset($_SESSION['passwordError']);
                     </span>
                 </div>
                 <div class="card bounce_animation">
-                    <img src="../images/noImag.jpg" alt="">
+                    <img src="../images/gelu.jpg" alt="">
                     <span>
                         <h3>Gelu Golea</h3>
                         <p>Pedagog</p>
-                    </span>
-                </div>
-                <div class="card bounce_animation">
-                    <img src="../images/ioan.jpg" alt="">
-                    <span>
-                        <h3>Ioan Șerban</h3>
-                        <p>Administrator</p>
                     </span>
                 </div>
             </div> 

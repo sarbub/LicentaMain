@@ -48,7 +48,6 @@ h3{
     --real_red:#EF476F;
     --error_red:#951432e1;
     --real_red_opac:#ef476e70;
-    --pink:#118ab2;
     --black:#1C1C1C;
     --grade_one_white_black:#252525;
     --grade_two_white_black:#2c2b2b;
@@ -108,20 +107,20 @@ h3{
     height: 30px;
     font-size: 32px;
     font-weight: bold;
-    color: var(--white);
+    color: white;
 }
 
 .navigation_section nav ul{
     list-style-type: none;
     gap: 60px;
     cursor: pointer;
-    color: var(--white);
+    color: white!important;
     font-weight: bold;
 
 }
 
 .navigation_section nav ul a{
-    color: var(--white);
+    color: white;
 }
 
 .navigation_section #second_ul{

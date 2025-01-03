@@ -19,7 +19,7 @@ $incomeError = isset($_SESSION['incomeError']) ? $_SESSION['incomeError'] : '';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../frontend/css/forms.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <title></title>
+    <title>submit</title>
 </head>
 <body>
     <form id="request_place_form" method="POST" class="" action="../backend/submit_application_backend.php">
