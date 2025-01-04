@@ -57,7 +57,7 @@ session_start();
             </div>
             <div class="navigation_post_demands">
                 <ul>
-                    <li id="posts_active" class="active dark_radius_type_button">Postari</li>
+                    <li id="posts_active" class=" dark_type_rev_button">Postari</li>
                     <li id="demands_active" class = "dark_radius_type_button">Cereri</li>
                 </ul>
             </div>

@@ -41,15 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
   demand_open_btn.addEventListener("click", () => {
       demands.style.display = "flex";
       userPosts.style.display = "none";
-      post_open_btn.classList.remove("active");
-      demand_open_btn.classList.add("active");
+      post_open_btn.classList.remove("dark_type_rev_button");
+      post_open_btn.classList.add("dark_radius_type_button");
+      demand_open_btn.classList.remove("dark_radius_type_button");
+      demand_open_btn.classList.add("dark_type_rev_button");
   });
 
   post_open_btn.addEventListener("click", () => {
       demands.style.display = "none";
       userPosts.style.display = "flex";
-      post_open_btn.classList.add("active");
-      demand_open_btn.classList.remove("active");
+      post_open_btn.classList.add("dark_type_rev_button");
+      post_open_btn.classList.remove("dark_radius_type_button");
+      demand_open_btn.classList.add("dark_radius_type_button");
+      demand_open_btn.classList.remove("dark_type_rev_button");
   });
 
 

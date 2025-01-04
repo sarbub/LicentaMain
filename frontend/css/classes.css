@@ -1,5 +1,12 @@
 
 /* round buttons for the navigation */
+/* white */
+/* dark_radius_rev_type_button - white button with less radius radius  */
+/* dark_type_rev_button - white button with more radius radius  */
+
+/* black */
+/* dark_type_button - black button with less radius radius  */
+/* dark_radius_type_button - black button with more radius radius  */
 
 .dark_radius_type_button, .dark_radius_rev_type_button, .dark_type_button, .dark_type_rev_button{
     cursor: pointer;
@@ -9,7 +16,7 @@
     text-align: center;
     justify-content: center;
     border-radius: 40px;
-    color: var(--white);
+    color: var(--white)!important;
     padding: 8px 12px;
     background-color:var(--grade_one_white_black);
     transition: all 0.5s ease;
@@ -38,7 +45,7 @@
 
 .dark_radius_type_button:hover, .dark_type_button:hover {
     background-color: var(--white);
-    color: var(--black);
+    color: var(--black)!important;
 }
 
 .round_button , .round_button_rev{

@@ -15,7 +15,14 @@ try {
         return;
     }
     if(!$events_res || $events_res->num_rows == 0){
-        echo "no events found";
+            echo <<<HTML
+            <link rel="stylesheet" href="../frontend/components/components_css/events.css">
+            <div class = "main_no_events_div">
+                <img src=".././images/purple.jpg" alt="">
+                <span class = "after"></span>
+                <button id = "create_event_btn" class = "dark_type_button">Create event</button>
+            </div>
+            HTML;
         return;
     }
     while($event_row= $events_res->fetch_assoc()){
