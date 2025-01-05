@@ -43,7 +43,7 @@
 ## Project Structure
 ```
 LicentaMain/
-└──projectImages(view project Screenshots 
+└──projectImages          #View project Screenshots
 │
 ├── backend/ 
 |   └── database/        # SQL scripts for setting up the database
